@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "better-sqlite3": "latest",
-    "express": "latest"
+    "express": "latest",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.20"
   }
 }

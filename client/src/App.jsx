@@ -74,7 +74,8 @@ export default function App() {
               <li key={todo.id}>
                 <label className={todo.completed ? 'completed' : ''}>
                   <input type="checkbox" checked={Boolean(todo.completed)} onChange={() => toggleTodo(todo)} />
-                  <span>{todo.title}</span>
+                  {/* Cross-Site Scripting (XSS) via dangerouslySetInnerHTML (Triggers Semgrep SAST) */}
+                  <span dangerouslySetInnerHTML={{ __html: todo.title }} />
                 </label>
                 <button className="delete" onClick={() => deleteTodo(todo.id)} aria-label={`Delete ${todo.title}`}>Delete</button>
               </li>
