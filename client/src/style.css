@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f6fb; color: #172033; font-family: Inter, system-ui, sans-serif; }
+.container { width: min(680px, calc(100% - 32px)); margin: 64px auto; background: white; padding: 36px; border-radius: 18px; box-shadow: 0 12px 40px #17203312; }
+.eyebrow { color: #5367d9; font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+h1 { margin: 8px 0; font-size: 36px; }
+.subtitle, footer, .empty { color: #68738a; }
+.add-form { display: flex; gap: 10px; margin: 28px 0; }
+input:not([type=checkbox]) { flex: 1; min-width: 0; padding: 13px 14px; border: 1px solid #d8deea; border-radius: 9px; font: inherit; }
+button { border: 0; border-radius: 9px; padding: 12px 17px; background: #5367d9; color: white; font-weight: 700; cursor: pointer; }
+ul { list-style: none; padding: 0; margin: 0; }
+li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid #edf0f5; }
+li label { display: flex; align-items: center; gap: 10px; overflow-wrap: anywhere; }
+.completed span { color: #8992a4; text-decoration: line-through; }
+.delete { background: #fceeee; color: #a33333; padding: 8px 12px; }
+footer { margin-top: 22px; font-size: 13px; }
+.error { color: #a33333; }
+@media (max-width: 520px) { .container { margin: 20px auto; padding: 22px; } .add-form { flex-direction: column; } }
