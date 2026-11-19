@@ -35,6 +35,14 @@ jobs:
           
       - name: Install dependencies
         run: npm install
+        
+      - name: Upload npm error log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-error-log-${{ matrix.app }}
+          path: /home/runner/.npm/_logs/
+          if-no-files-found: warn
 
       - name: Run tests
         run: npm test
